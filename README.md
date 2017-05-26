@@ -1,7 +1,7 @@
 # CWChildVisitingClock
 I build this for my niece because she is to young to read the real clock. 
 
-# Install neopixel
+## Install neopixel
 sudo apt-get update
 sudo apt-get install build-essential python-dev git scons swig
 
@@ -12,7 +12,7 @@ scons
 cd python
 sudo python setup.py install
 
-# Disable Audio Device
+## Disable Audio Device
 cd /etc/modprobe.d
 sudo nano alsa-blacklist.conf
 
