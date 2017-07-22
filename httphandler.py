@@ -44,15 +44,15 @@ class HttpHandler(BaseHTTPRequestHandler):
 			elif field == 'color_hours':
 				self.wfile.write('Farbe Stunden: ')
 				self.wfile.write('%s\n' % (form[field].value))
-				self.config['DEFAULT']['togocolor'] = str(int(form[field].value[1:3], 16)) + ',' + str(int(form[field].value[3:5], 16)) + ',' + str(int(form[field].value[5:7], 16))
+				self.config['DEFAULT']['hourcolor'] = str(int(form[field].value[1:3], 16)) + ',' + str(int(form[field].value[3:5], 16)) + ',' + str(int(form[field].value[5:7], 16))
 			elif field == 'color_minutes':
 				self.wfile.write('Farbe Minuten: ')
 				self.wfile.write('%s\n' % (form[field].value))
-				self.config['DEFAULT']['tofromcolor'] = str(int(form[field].value[1:3], 16)) + ',' + str(int(form[field].value[3:5], 16)) + ',' + str(int(form[field].value[5:7], 16))
+				self.config['DEFAULT']['minutecolor'] = str(int(form[field].value[1:3], 16)) + ',' + str(int(form[field].value[3:5], 16)) + ',' + str(int(form[field].value[5:7], 16))
 			elif field == 'color_seconds':
 				self.wfile.write('Farbe Sekunden: ')
 				self.wfile.write('%s\n' % (form[field].value))
-				self.config['DEFAULT']['beatcolor'] = str(int(form[field].value[1:3], 16)) + ',' + str(int(form[field].value[3:5], 16)) + ',' + str(int(form[field].value[5:7], 16))
+				self.config['DEFAULT']['secondcolor'] = str(int(form[field].value[1:3], 16)) + ',' + str(int(form[field].value[3:5], 16)) + ',' + str(int(form[field].value[5:7], 16))
 
 		with open('cwchildvisitingclock.properties', 'w') as configfile:
 			self.config.write(configfile)

@@ -18,9 +18,9 @@ from httphandler import HttpHandler
 '''
 Start the drawing.
 '''
+#time.sleep(60)
 clock = Clock()
 clock.clear()
-time.sleep(2)
 clock.run()
 
 try:
